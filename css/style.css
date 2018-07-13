@@ -28,6 +28,11 @@ div {
   min-height: 250px; 
 }
 
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333;
+}
 .container2 {
 	max-width: 1200px;
 	margin: 0 auto;

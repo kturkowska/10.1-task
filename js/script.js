@@ -22,7 +22,7 @@ buttonGroup.addEventListener( 'click', function( event ) {
   flkty.selectCell( index );
 });
 
-var flkty = new Flickity('.carousel');
+
 
 var progressBar = document.querySelector('.progress-bar')
 
