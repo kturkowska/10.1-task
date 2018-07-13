@@ -45,5 +45,8 @@
     "onchange": "^4.0.0",
     "rimraf": "^2.6.2",
     "sync": "^0.2.5"
+  },
+  "dependencies": {
+    "flickity": "^2.1.2"
   }
 }
