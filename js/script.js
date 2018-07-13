@@ -7,12 +7,7 @@ var flkty = new Flickity( elem, {
 
 });
 
-var progressBar = document.querySelector('.progress-bar')
 
-flkty.on( 'scroll', function( progress ) {
-  progress = Math.max( 0, Math.min( 1, progress ) );
-  progressBar.style.width = progress * 100 + '%';
-});
 
 var buttonGroup = document.querySelector('.button-group');
 var buttons = buttonGroup.querySelectorAll('.button');
@@ -27,4 +22,11 @@ buttonGroup.addEventListener( 'click', function( event ) {
   flkty.selectCell( index );
 });
 
+var flkty = new Flickity('.carousel');
 
+var progressBar = document.querySelector('.progress-bar')
+
+flkty.on( 'scroll', function( progress ) {
+  progress = Math.max( 0, Math.min( 1, progress ) );
+  progressBar.style.width = progress * 100 + '%';
+});
