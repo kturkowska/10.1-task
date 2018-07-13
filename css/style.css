@@ -35,7 +35,9 @@ div {
 	line-height: 50vh;
 	background-size: cover;
 }
-
+.flickity-page-dots {
+  display: none;
+}
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
