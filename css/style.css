@@ -63,6 +63,7 @@ div {
 	line-height: 50vh;
 	background-size: cover;
 	background-position: center;
+	text-shadow: 1px 1px 2px  black;
 }
 .flickity-page-dots {
   display: none;
