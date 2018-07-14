@@ -20,7 +20,25 @@ div {
 }
 .button-group {
 	position: absolute;
-	top:50px;
+	top:60px;
+	left: 10px;
+}
+.button {
+	background-color: inherit;
+	border: 1px solid #345461;
+	color: #345461;
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	font-size: 12px;
+	text-align: center;
+	transition: 0.2s;
+}
+.button:hover {
+	background-color:#345461 ;
+	color: white;
+	border: none;
+	cursor: pointer;
 }
 .carousel-cell {
   width: 100%; 
