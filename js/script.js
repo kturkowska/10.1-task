@@ -1,29 +1,33 @@
 'use strict';
-var elem = document.querySelector('.main-carousel');
-var flkty = new Flickity( elem, {
-  // options
-  cellAlign: 'left',
-  contain: true,
-
-});
 
 
-(function(){ 
 
-  var templateList = document.getElementById('template-product-list').innerHTML;
-  var templateItem = document.getElementById('template-product-item').innerHTML;
-  Mustache.parse(templateItem);
-  var listItems = '';
-  for(var i = 0; i < productsData.length; i++){
-    console.log(productsData);
-    listItems += Mustache.render(templateItem, productsData[i]);
-  } 
-  var fullProductList = Mustache.render(templateList, {products: listItems});
-  results.insertAdjacentHTML('beforeend', fullProductList);
-})(); 
+(function() {
  
-
-
+    var templateList = document.getElementById('template-list').innerHTML;
+    var templateItem = document.getElementById('template-slide').innerHTML;
+    Mustache.parse(templateItem);
+ 
+    var listItems = '';
+ 
+    for (var i = 0; i < slidesData.length; i++) {
+        console.log(slidesData);
+        listItems += Mustache.render(templateItem, slidesData[i]);
+    }
+ 
+    var fullProductList = Mustache.render(templateList, { slides: listItems });
+    slider.insertAdjacentHTML('beforeend', fullProductList);
+ 
+ 
+})();
+ 
+var elem = document.querySelector('.main-carousel');
+var flkty = new Flickity(elem, {
+    // options
+    cellAlign: 'left',
+    contain: true,
+ 
+});
 
 
 
