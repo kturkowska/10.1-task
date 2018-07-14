@@ -53,13 +53,29 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
+
+(function(){ 
+  
+  // Definujemy funkcję initMap w zakresie globalnym (czyli jako właściwość obiektu window).
+    window.initMap = function() {
+    
+    // Zapisujemy w zmiennej obiekt zawierający współrzędne geograficzne.
+    var uluru = {lat: -25.363, lng: 131.044};
+    
+    // W zmiennej map zapisujemy nową instancję obiektu Map. 
+    var map = new google.maps.Map(document.getElementById('map'), {
+      // Podajemy opcje mapy, np. zoom i punkt wycentrowania mapy.
+      zoom: 4,
+      center: uluru
+    });
+    
+    // Definiujemy marker jako nową instancję obiektu Marker.
+    var marker = new google.maps.Marker({
+      // I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
+      position: uluru,
+      map: map
+    }); 
+  } 
+   
+})();  
+initMap();
