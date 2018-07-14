@@ -56,26 +56,47 @@ flkty.on( 'scroll', function( progress ) {
 
 (function(){ 
   
-  // Definujemy funkcję initMap w zakresie globalnym (czyli jako właściwość obiektu window).
     window.initMap = function() {
     
-    // Zapisujemy w zmiennej obiekt zawierający współrzędne geograficzne.
-    var uluru = {lat: -25.363, lng: 131.044};
+    var venice = {lat: 33.986, lng: -118.475};
+    var vegas = {lat: 36.170, lng: -115.139};
+    var canyon = {lat: 36.099, lng: -112.103};
+    var monument = {lat: 37.020, lng: -110.098};
+    var sanfran = {lat: 37.823, lng: -122.479};
     
-    // W zmiennej map zapisujemy nową instancję obiektu Map. 
     var map = new google.maps.Map(document.getElementById('map'), {
-      // Podajemy opcje mapy, np. zoom i punkt wycentrowania mapy.
-      zoom: 4,
-      center: uluru
+      zoom: 6,
+      center: venice
     });
     
-    // Definiujemy marker jako nową instancję obiektu Marker.
-    var marker = new google.maps.Marker({
-      // I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
-      position: uluru,
+    var markerOne = new google.maps.Marker({
+      position: venice,
       map: map
-    }); 
-  } 
+    });
+    
+    var markerTwo = new google.maps.Marker({
+      position: vegas,
+      map: map
+    });
+
+
+    
+    var markerThree = new google.maps.Marker({
+      position: canyon,
+      map: map
+    });
+
+     var markerThree = new google.maps.Marker({
+      position: monument,
+      map: map
+    });
+
+      var markerThree = new google.maps.Marker({
+      position: sanfran,
+      map: map
+    });
+     
+    } 
    
 })();  
 initMap();
