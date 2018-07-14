@@ -53,7 +53,6 @@ div {
 	color: white;
 	font-weight: 900;
 	line-height: 50vh;
-
 	text-shadow: 1px 1px 2px  black;
 	letter-spacing: .1rem;
 }
@@ -121,6 +120,13 @@ ul > li > a:hover {
 .last p {
 	font-weight: 100;
 }
+
+
+#map {
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+ }
+
 .map {
 	width: 100%;
 	-webkit-filter: grayscale(100%);
