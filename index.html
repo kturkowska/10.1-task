@@ -24,57 +24,77 @@
 		</nav>
 	</header>
 
+
+
+
+
+
+	<div class="main-carousel" data-flickity='{ "hash": true}' data-flickity='{ "pageDots": false }'>
+  		<div class="carousel-cell" id="carousel-cell1">
+			<div id="results" class="container2"></div>
+  		</div>
+  		<div class="carousel-cell" id="carousel-cell2">
+  			<div id="results" class="container2"></div>
+  		</div>
+  		<div class="carousel-cell" id="carousel-cell3">
+  			<div id="results" class="container2"></div>
+  		</div>
+ 		<div class="carousel-cell" id="carousel-cell4">
+ 			<div id="results" class="container2"></div>
+ 		</div>
+  		<div class="carousel-cell" id="carousel-cell5">
+  			<div id="results" class="container2"></div>
+  		</div>
+
+	</div>
+
+<div id="results">res</div>
+<script id="template-product-list" type="x-tmpl-mustache">
+	<h3>Product list</h3>
+	<ul>
+	{{{products}}}
+	</ul>
+</script>
+
+<script id="template-product-item" type="x-tmpl-mustache">
+
+<li>{{ name }}</li>
+<p>{{{ imgSource }}}</li>
+</script>
+
+
 <script>
+var productsData = [
 
-
-var carouselData = [
 	{
-		image: "1"
-		title: 'LOS ANGELES'
-		description: '<img src="https://images.pexels.com/photos/745236/pexels-photo-745236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="LA photo">'
+		name: 'LOS ANGELES', 
+		imgSource: '<img src="https://images.pexels.com/photos/745236/pexels-photo-745236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="LA photo">'
+	},
+	
+	{
+		name: 'LAS VEGAS', 
+		imgSource: '<img src="https://images.pexels.com/photos/161772/las-vegas-nevada-cities-urban-161772.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Las Vegas photo">'
 	},
 	{
-		image: "2"
-		title: 'LAS VEGAS'
-		description: '<img src="https://images.pexels.com/photos/161772/las-vegas-nevada-cities-urban-161772.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Las Vegas photo">'
+		name: 'GRAND CANYON', 
+		imgSource: '<img src="https://images.pexels.com/photos/63556/pexels-photo-63556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Grand Canyon photo">'
 	},
 	{
-		image: "3"
-		title: 'GRAND CANYON'
-		description: '<img src="(https://images.pexels.com/photos/63556/pexels-photo-63556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Grand Canyon photo">'
+		name: 'MONUMENT VALLEY', 
+		imgSource: '<img src="https://images.pexels.com/photos/161820/monument-valley-west-western-161820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Monument Valley photo">'
 	},
 	{
-		image: "4"
-		title: 'MONUMENT VALLEY'
-		description: '<img src="https://images.pexels.com/photos/161820/monument-valley-west-western-161820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Monument Valley photo">'
-	},
-	{
-		image: "5"
-		title: 'SAN FRANCISCO'
-		description: '<img src="https://images.pexels.com/photos/7653/pexels-photo.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="San Francisco photo">'
+		name: 'SAN FRANCISCO', 
+		imgSource: '<img src="https://images.pexels.com/photos/7653/pexels-photo.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="San Francisco photo">'
 	},
 ];
 </script>
 
 
-	<div class="main-carousel" data-flickity='{ "hash": true}' data-flickity='{ "pageDots": false }'>
-  		<div class="carousel-cell" id="carousel-cell1" style="background-image: url(https://images.pexels.com/photos/745236/pexels-photo-745236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)";>
-			<div class="container2">LOS ANGELES</div>
-  		</div>
-  		<div class="carousel-cell" id="carousel-cell2" style="background-image: url(https://images.pexels.com/photos/161772/las-vegas-nevada-cities-urban-161772.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)";>
-  			<div class="container2" >LAS VEGAS</div>
-  		</div>
-  		<div class="carousel-cell" id="carousel-cell3" style="background-image: url(https://images.pexels.com/photos/63556/pexels-photo-63556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)";>
-  			<div class="container2" > GRAND CANYON</div>
-  		</div>
- 		<div class="carousel-cell" id="carousel-cell4" style="background-image: url(https://images.pexels.com/photos/161820/monument-valley-west-western-161820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)";>
- 			<div class="container2" > MONUMENT VALLEY</div>
- 		</div>
-  		<div class="carousel-cell" id="carousel-cell5" style="background-image: url(https://images.pexels.com/photos/7653/pexels-photo.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)";>
-  			<div class="container2"> SAN FRANCISCO</div>
-  		</div>
 
-	</div>
+
+
+
 	<div class="button-group">
   			<button class="button" data-selector=".cell1">Reset</button>
   	</div>
@@ -94,7 +114,8 @@ var carouselData = [
 	</footer>
 	<script src="vendor/flickity.pkgd.min.js"></script>
 	<script src="vendor/hash.js"></script>
-	<script src="vendor/mustache.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="vendor/mustache.min.js"></script>
+	
 </body>
 </html>
