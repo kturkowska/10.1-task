@@ -38,8 +38,9 @@
     </script>
  
     <script id="template-slide" type="x-tmpl-mustache">
-        <div class="carousel-cell">
-            <img src="{{imgSource}}" alt="{{name}}">
+        <div class="carousel-cell" style="background-image:url('{{imgSource}}');">
+            <h1>{{name}} </h1>
+
         </div>
     </script>
  
@@ -48,6 +49,7 @@
         var slidesData = [{
             name: 'LOS ANGELES',
             imgSource: 'https://images.pexels.com/photos/745236/pexels-photo-745236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+            
         }, {
             name: 'LAS VEGAS',
             imgSource: 'https://images.pexels.com/photos/161772/las-vegas-nevada-cities-urban-161772.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
