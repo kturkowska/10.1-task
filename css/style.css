@@ -49,9 +49,9 @@ div {
 }
 
 .progress-bar {
-  height: 20px;
+  height: 5px;
   width: 0;
-  background: #333;
+  background: #345461;
 }
 .container2 {
 	max-width: 1200px;
@@ -64,6 +64,7 @@ div {
 	background-size: cover;
 	background-position: center;
 	text-shadow: 1px 1px 2px  black;
+	letter-spacing: .1rem;
 }
 .flickity-page-dots {
   display: none;
