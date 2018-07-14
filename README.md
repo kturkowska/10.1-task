@@ -1,1 +1,1 @@
-https://github.com/kturkowska/10.1-task
+https://kturkowska.github.io/10.1-task/
