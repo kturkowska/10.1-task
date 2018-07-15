@@ -54,11 +54,10 @@ flkty.on( 'scroll', function( progress ) {
  
 });
 
-//flkty.on( 'change',
-//  function( index ){  
-//  map.panTo(slidesData[index].coords); 
-// map.setZoom(10);
-//});
+flkty.on( 'change', function( index ){  
+  map.panTo(slidesData[index].coords); 
+  map.setZoom(10);
+});
 
 
 (function(){ 
@@ -75,8 +74,10 @@ flkty.on( 'scroll', function( progress ) {
         var marker = new google.maps.Marker({
         position: slidesData[i].coords,
         map: map
-        });
+
+      })
+       
       }
     } 
-   
+  
 })();  
