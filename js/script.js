@@ -74,9 +74,11 @@ flkty.on( 'change', function( index ){
         var marker = new google.maps.Marker({
         position: slidesData[i].coords,
         map: map
+        }); 
 
-      })
-       
+        marker.addListener('click', function(){
+          flkty.selectCell(slideslData[i]);
+        })
       }
     } 
   
