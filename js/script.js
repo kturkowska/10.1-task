@@ -80,4 +80,3 @@ flkty.on( 'scroll', function( progress ) {
     } 
    
 })();  
-initMap();
