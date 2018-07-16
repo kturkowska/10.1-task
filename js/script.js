@@ -54,10 +54,7 @@ flkty.on( 'scroll', function( progress ) {
  
 });
 
-flkty.on( 'change', function( ){  
-  map.panTo(slidesData[i].coords); 
-  map.setZoom(20);
-});
+
 
 
 (function() {
@@ -65,7 +62,7 @@ flkty.on( 'change', function( ){
     window.initMap = function() {
  
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 10,
+            zoom: 7,
             center: slidesData[0].coords
         });
  
@@ -80,5 +77,10 @@ flkty.on( 'change', function( ){
                 flkty.selectCell(i);
             });
         }
+        flkty.on( 'change', function( index ){  
+          map.panTo(slidesData[index].coords); 
+          map.setZoom(12);
+        });
     };
 })();
+
